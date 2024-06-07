@@ -8,7 +8,14 @@ const UserForm = () => {
   const [formData, setFormData] = useState({});
   const [errorMessage, setErrorMessage] = useState("");
 
-  
+  const handleChange = (e) => {
+    const value = e.target.value;
+    const name = e.target.name;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
 
   
 
