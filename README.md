@@ -17,7 +17,7 @@ This project is a Next.js application that demonstrates authentication features 
 
 ## Live Demo
 
-You can try out the live demo of the app [here](https://nextjs-fullstackauth.onrender.com/).
+You can try out the live demo of the app [here](https://nextjs-auth-js.onrender.com).
 
 ## Folder Structure
 
