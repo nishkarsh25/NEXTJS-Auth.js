@@ -4,4 +4,11 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import User from "@/app/(models)/User";
 import bcrypt from "bcryptjs";
 
-
+export const options = {
+  providers: [
+    
+    
+    
+  ],
+  
+};
