@@ -18,4 +18,4 @@ const Member = async () => {
   );
 };
 
-
+export default Member;
