@@ -13,7 +13,11 @@ export default withAuth(
       return NextResponse.rewrite(new URL("/Denied", req.url));
     }
   },
-  
+  {
+    callbacks: {
+      authorized: ({ token }) => !!token,
+    },
+  }
 );
 
 
