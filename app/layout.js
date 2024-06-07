@@ -12,7 +12,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <AuthProvider>
         <body className="bg-gray-100">
-          
           <Nav />
           <div className="m-2">{children}</div>
         </body>
