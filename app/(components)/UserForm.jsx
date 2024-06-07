@@ -17,7 +17,23 @@ const UserForm = () => {
     }));
   };
 
-  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setErrorMessage("");
+    const res = await fetch("/api/Users", {
+      method: "POST",
+      body: JSON.stringify({ formData }),
+      "content-type": "application/json",
+    });
+
+    if (!res.ok) {
+      const response = await res.json();
+      setErrorMessage(response.message);
+    } else {
+      router.refresh();
+      router.push("/");
+    }
+  };
 
   
 };
