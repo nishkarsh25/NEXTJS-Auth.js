@@ -3,7 +3,7 @@ import { getServerSession } from "next-auth";
 import { options } from "../api/auth/[...nextauth]/options";
 
 const Nav = async () => {
-  
+  const session = await getServerSession(options);
   
 };
 
