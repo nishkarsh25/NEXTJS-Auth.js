@@ -15,7 +15,11 @@ export async function POST(req) {
       );
     }
 
-    
+    // check for duplicate emails
+    const duplicate = await User.findOne({ email: userData.email })
+      .lean()
+      .exec();
+
     
 
     
