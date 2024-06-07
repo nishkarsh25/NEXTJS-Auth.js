@@ -8,3 +8,4 @@ const Denied = () => {
   );
 };
 
+export default Denied;
