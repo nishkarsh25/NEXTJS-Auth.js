@@ -20,7 +20,9 @@ export async function POST(req) {
       .lean()
       .exec();
 
-    
+    if (duplicate) {
+      return NextResponse.json({ message: "Duplicate Email" }, { status: 409 });
+    }
 
     
 
