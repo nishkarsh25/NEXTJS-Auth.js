@@ -23,7 +23,24 @@ export const options = {
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_Secret,
     }),
-    
+    GoogleProvider({
+      profile(profile) {
+        console.log("Profile Google: ", profile);
+
+        let userRole = "Google User";
+        if (profile?.email == "bm21btech11016@iith.ac.in") {
+          userRole = "admin";
+        }
+        
+        return {
+          ...profile,
+          id: profile.sub,
+          role: userRole,
+        };
+      },
+      clientId: process.env.GOOGLE_ID,
+      clientSecret: process.env.GOOGLE_Secret,
+    }),
     
   ],
   
