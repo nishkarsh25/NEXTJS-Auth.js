@@ -6,7 +6,23 @@ import bcrypt from "bcryptjs";
 
 export const options = {
   providers: [
-    
+    GitHubProvider({
+      profile(profile) {
+        console.log("Profile GitHub: ", profile);
+
+        let userRole = "GitHub User";
+        if (profile?.email == "bm21btech11016@iith.ac.in") {
+          userRole = "admin";
+        }
+
+        return {
+          ...profile,
+          role: userRole,
+        };
+      },
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_Secret,
+    }),
     
     
   ],
